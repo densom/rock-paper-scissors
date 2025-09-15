@@ -70,4 +70,31 @@ uv run flake8 src/
 - Do NOT include Co-Authored-By: Claude attribution
 - Keep commit messages concise but informative
 
+## Linear.app Project Management
+
+This project uses Linear.app for tracking development progress and managing the educational backlog.
+
+### Linear Configuration
+- **Project**: Rock-Paper-Scissors (configured for educational learning progression)
+- **Team**: Densom1
+- **Current Phase**: Phase 1 - Foundation Features
+
+### Educational Labels System
+- **Phase Labels**: Phase-1 (Green), Phase-2 (Blue), Phase-3 (Orange), Phase-4 (Purple), Phase-5 (Pink)
+- **Complexity Labels**: beginner (Light Green), intermediate (Yellow), advanced (Red)
+- **Priority Labels**: p0 (Must have), p1 (Should have), p2 (Could have), p3 (Won't have)
+- **Feature Labels**: foundation, cli, ai, oop, web, multiplayer, etc.
+
+### Issue Management
+- All 14 user stories from docs/BACKLOG.md have been created as Linear issues (DEN-9 through DEN-22)
+- **RPS-001: Basic CLI Game** (DEN-9) is the starting point, set to "Todo" status
+- Issues follow learning progression with proper dependencies
+- Story points included for educational time estimation
+
+### Linear Usage Guidelines
+- Use the linear-project-manager agent for all Linear.app configuration and issue management
+- The linear-project-manager agent should ONLY handle Linear tasks, not development environment setup or code implementation
+- Update issue status as development progresses through each learning phase
+- Reference Linear issue numbers (e.g., DEN-9) in commit messages when implementing features
+
 ## Other Guidance from the # Memory Commands
