@@ -11,23 +11,27 @@ Rock Paper Scissors learning project - a progressive Python game to teach progra
 ### Python Environment
 ```bash
 # Create virtual environment
-python -m venv venv
+uv venv
 
 # Activate virtual environment (Windows)
-venv\Scripts\activate
+.venv\Scripts\activate
 
-# Install dependencies (as they're added)
-pip install -r requirements.txt
+# Add dependencies to the project
+uv add <package-name>
+# Add development dependencies
+uv add --dev <package-name>
+# Install all dependencies from pyproject.toml
+uv sync
 
 # Run the game
-python src/main.py
+uv run python src/main.py
 
 # Run tests (when added)
-python -m pytest tests/
+uv run python -m pytest tests/
 
 # Code formatting (when added)
-black src/
-flake8 src/
+uv run black src/
+uv run flake8 src/
 ```
 
 ## Project Structure
@@ -41,7 +45,8 @@ flake8 src/
 ├── docs/                  # Project documentation
 │   └── BACKLOG.md         # Feature backlog for Linear.app
 ├── web/                   # Web interface (future phases)
-└── requirements.txt       # Python dependencies
+├── pyproject.toml         # Project configuration and dependencies (uv preferred)
+└── requirements.txt       # Python dependencies (legacy support)
 ```
 
 ## Architecture
@@ -61,6 +66,8 @@ flake8 src/
 ## Git Commit Guidelines
 
 - When creating commits, use descriptive messages that explain the changes
-- Include the 🤖 Generated with [Claude Code](https://claude.ai/code) footer
+- Do NOT include the 🤖 Generated with [Claude Code](https://claude.ai/code) footer
 - Do NOT include Co-Authored-By: Claude attribution
 - Keep commit messages concise but informative
+
+## Other Guidance from the # Memory Commands
