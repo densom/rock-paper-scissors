@@ -19,10 +19,10 @@ def display_rules():
 
 def get_player_choice():
     while True:
-        choice = input("Enter your choice (rock/paper/scissors): ").lower().strip()
-        if choice in ["rock", "paper", "scissors"]:
+        choice = input("Enter your choice (rock/paper/scissors) or 'q' to quit: ").strip()
+        if choice in ["rock", "paper", "scissors", "DYNAMITE", "q"]:
             return choice
-        print("Invalid choice! Please enter rock, paper, or scissors.")
+        print("Invalid choice! Please enter rock, paper, scissors, or 'q' to quit.")
 
 
 def get_computer_choice():
@@ -33,6 +33,8 @@ def determine_winner(player_choice, computer_choice):
     if player_choice == computer_choice:
         return GameResult.TIE
 
+    if player_choice == "DYNAMITE":
+        return GameResult.PLAYER_WINS
     winning_combinations = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
 
     if winning_combinations[player_choice] == computer_choice:
@@ -45,21 +47,28 @@ def main():
     display_rules()
     print()
 
-    player_choice = get_player_choice()
-    computer_choice = get_computer_choice()
+    while True:
+        player_choice = get_player_choice()
+        if player_choice == "q":
+            print("Thanks for playing!")
+            break
 
-    print(f"\nYou chose: {player_choice}")
-    print(f"Computer chose: {computer_choice}")
-    print()
+        computer_choice = get_computer_choice()
 
-    winner = determine_winner(player_choice, computer_choice)
+        print(f"\nYou chose: {player_choice}")
+        print(f"Computer chose: {computer_choice}")
+        print()
 
-    if winner == GameResult.TIE:
-        print("It's a tie!")
-    elif winner == GameResult.PLAYER_WINS:
-        print("You win!")
-    else:
-        print("Computer wins!")
+        winner = determine_winner(player_choice, computer_choice)
+
+        if winner == GameResult.TIE:
+            print("It's a tie!")
+        elif winner == GameResult.PLAYER_WINS:
+            print("You win!")
+        else:
+            print("Computer wins!")
+
+        print()
 
 
 if __name__ == "__main__":
