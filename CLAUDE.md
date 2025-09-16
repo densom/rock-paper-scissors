@@ -67,6 +67,8 @@ uv run flake8 src/
 
 ### Git Branch
 - Ensure branch names or commit messages include the Linear ID so Linear auto-links commits/PRs.
+- Branch names should be in the format `<issue-id>-title`
+  - e.g., `den-9-rps-001-basic-cli-game`
 
 ### Git Commit
 
@@ -74,7 +76,32 @@ uv run flake8 src/
 - Do NOT include the 🤖 Generated with [Claude Code](https://claude.ai/code) footer
 - Do NOT include Co-Authored-By: Claude attribution
 - Keep commit messages concise but informative
-- Always reference the Linear issue ID in commits using the format: `Linear-<issue number>: <commit message>`.
+- Always reference the Linear issue ID in commits using the format: `<issue-id>: <descriptive message>`.
+- Use Linear magic words with issue IDs to facilitate triggering automatic workflow updates
+
+#### Linear Magic Words
+
+**Closing Magic Words** (will close the issue when merged):
+- `closes`, `close`, `closed`, `closing`
+- `fixes`, `fix`, `fixed`, `fixing`
+- `resolves`, `resolve`, `resolved`, `resolving`
+- `completes`, `complete`, `completed`, `completing`
+
+**Contributing Magic Words** (will link without closing):
+- `part of`, `contributes to`, `towards`
+- `ref`, `references`, `related to`
+
+#### Commit Message Format
+Use magic words with Linear issue IDs: `<magic word> <issue-id>: <descriptive message>`
+
+**Examples:**
+- `git commit -m "fixes DEN-9: implement basic CLI game loop"`
+- `git commit -m "part of DEN-10: add player input validation"`
+- `git commit -m "closes DEN-11: implement game scoring system"`
+
+**Workflow Automation:**
+- Issues move to "In Progress" when branch is pushed
+- Issues move to "Done" when commit is merged to default branch (master)
 
 ## Linear.app Project Management
 
