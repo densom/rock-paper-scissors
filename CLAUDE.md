@@ -94,6 +94,10 @@ This project uses Linear.app for tracking development progress and managing the 
 ### Linear Usage Guidelines
 - Use the linear-project-manager agent for all Linear.app configuration and issue management
 - The linear-project-manager agent should ONLY handle Linear tasks, not development environment setup or code implementation
+- **Issue Status Workflow**:
+  - Move issues to "In Progress" when starting work
+  - Move to "In Review" when implementation is complete
+  - Never move to "Done".  This will be done outside of Claude
 - Update issue status as development progresses through each learning phase
 - Reference Linear issue numbers (e.g., DEN-9) in commit messages when implementing features
 
