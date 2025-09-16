@@ -63,12 +63,18 @@ uv run flake8 src/
 - Focus on teaching one concept at a time
 - Include plenty of print statements for debugging and learning
 
-## Git Commit Guidelines
+## Git Guidelines
+
+### Git Branch
+- Ensure branch names or commit messages include the Linear ID so Linear auto-links commits/PRs.
+
+### Git Commit
 
 - When creating commits, use descriptive messages that explain the changes
 - Do NOT include the 🤖 Generated with [Claude Code](https://claude.ai/code) footer
 - Do NOT include Co-Authored-By: Claude attribution
 - Keep commit messages concise but informative
+- Always reference the Linear issue ID in commits using the format: `Linear-<issue number>: <commit message>`.
 
 ## Linear.app Project Management
 
