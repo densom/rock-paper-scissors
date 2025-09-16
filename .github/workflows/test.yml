@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, play-with-agents ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, play-with-agents ]
 
 jobs:
   test:
