@@ -112,6 +112,9 @@ This project uses Linear.app for tracking development progress and managing the 
 - **Team**: Densom1
 - **Current Phase**: Phase 1 - Foundation Features
 
+### Linear Rules
+ - When creating an issue, make sure it belongs to this project.
+
 ### Educational Labels System
 - **Phase Labels**: Phase-1 (Green), Phase-2 (Blue), Phase-3 (Orange), Phase-4 (Purple), Phase-5 (Pink)
 - **Complexity Labels**: beginner (Light Green), intermediate (Yellow), advanced (Red)
